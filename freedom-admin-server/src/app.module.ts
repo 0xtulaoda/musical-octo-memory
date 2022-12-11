@@ -7,13 +7,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import Configuration from './config/configuration';
 import { MissionModule } from './mission/mission.module';
 import { AdminModule } from './modules/admin/admin.module';
-import { EmailModule } from './modules/monitor/email/email.module';
-import { TwitterScanModule } from './modules/monitor/twitter/twitterScan.module';
 import { WSModule } from './modules/ws/ws.module';
 import './polyfill';
 import { LoggerModule } from './shared/logger/logger.module';
 import { SharedModule } from './shared/shared.module';
-import { TradeModule } from './modules/trade-bot/trade.module';
 
 import { LOGGER_MODULE_OPTIONS } from './shared/logger/logger.constants';
 import {
@@ -92,32 +89,6 @@ import { TypeORMLoggerService } from './shared/logger/typeorm-logger.service';
     AdminModule,
     // websocket module
     WSModule,
-    EmailModule,
-    // 业务功能模块
-    TwitterScanModule,
-    TradeModule,
-    // mongodb的连接
-    MongooseModule.forRoot(
-      'mongodb://token_sniper:2DPQ0b9oByq6KfGW@8.218.4.112:27017/token_sniper?retryWrites=true&w=majority',
-    ),
-    //邮箱配置
-    MailerModule.forRootAsync({
-      useFactory: () => ({
-        // transport: 'smtps://coderaxin@163.com:XIWXXNNWWMQSGKSD@smtp.163.com',
-        transport: 'smtps://2513691817@qq.com:cawxontbydvqechc@smtp.qq.com',
-        defaults: {
-          from: '"domain.com" <no-reply@domain.com>',
-        },
-        // template: {
-        //   // dir: process.cwd() + '/src/template/', // 这一句不用配置，可以找到路径
-        //   dir: path.join(__dirname, './template'),
-        //   adapter: new PugAdapter(),
-        //   options: {
-        //     strict: true,
-        //   },
-        // },
-      }),
-    }),
   ],
 })
 export class AppModule {}
