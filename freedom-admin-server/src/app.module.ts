@@ -84,7 +84,7 @@ import { TypeORMLoggerService } from './shared/logger/typeorm-logger.service';
     // custom module
     SharedModule,
     // mission module
-    MissionModule.forRoot(),
+    // MissionModule.forRoot(),
     // application modules import
     AdminModule,
     // websocket module

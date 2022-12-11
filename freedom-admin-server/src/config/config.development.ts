@@ -49,7 +49,7 @@ export default {
     access: 'public',
   },
   swagger: {
-    title: 'nest-admin后台管理系统API文档',
+    title: '防疫系统 API文档',
     desc: `NestJs CRUD for RESTful API使用 nestjs + mysql + typeorm + redis + jwt + swagger 企业中后台管理系统项目RBAC权限管理(细粒度到按钮)、实现单点登录等。`,
   },
 };

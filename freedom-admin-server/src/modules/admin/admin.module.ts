@@ -32,7 +32,7 @@ import { SystemModule } from './system/system.module';
     LoginModule,
     SystemModule,
     AccountModule,
-    NetdiskModule,
+    // NetdiskModule,
   ],
   providers: [
     {
